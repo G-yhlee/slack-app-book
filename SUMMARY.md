@@ -3,5 +3,5 @@
 * [slack-app-guide](README.md)
 
 
-## subject
-* [subject](book/subject/subject.md)
+## setting
+* [setting](book/setting/setting.md)
