@@ -1,6 +1,6 @@
 # Table of contents..
 
-* [template](README.md)
+* [slack-app-guide](README.md)
 
 
 ## subject
