@@ -1,23 +1,49 @@
-## 인트로
+## 인트로 
 ```md
 슬랙 앱을 만들기 위한 과정을 기록합니다.
 슬랙 앱은 웹 훅, restApi 이용 등등 의 다양한 방식으로 개발할수 있지만,
 여기에서는 boltjs 라는 프레임 워크를 활용해 슬랙 앱을 개발하는 방법을 알아 보도록 하겠습니다.
+```
+## 둘러볼 페이지
+```md
+슬랙 앱을 만드는동안 다음과 같은 페이지들을 둘러볼 것입니다.
+편의상 페이지 이름을 다음과 같이 명명하겠습니다.
 
-[ bolt js 공식 홈 ]
-https://slack.dev/bolt-js/tutorial/getting-started
+공식 페이지 : https://api.slack.com/
+앱스 페이지 : https://api.slack.com/apps
+마이앱 페이지 : https://api.slack.com/apps/..마이앱...
+볼츠js 페이지 : https://slack.dev/bolt-js/tutorial/getting-started
+
 ```
 
 
-
-## 1. Create New App
-```
-
-아래의 웹 사이트에 방문하여 슬랙 앱을 만듭니다.
-
-https://api.slack.com/apps
+## 1. 앱 만들기
+```js
+앱스 페이지에서 `Create New App` 을 클릭 하여 앱 생성을 진행 합니다.
 ```
 
 
-## 2. 
+## 2. 토큰 생성 하기
+```js
+
+슬랙앱을 만들때는 권한 설정 및 인증 위해 토큰을 사용합니다.
+토큰의 종류는 다음과 같습니다.
+
+1. 유저 토큰 ( xoxp ) : 자동생성 됩니다.
+2. 봇 토큰 ( xoxb ) : 
+3. 앱 토큰 ( xapp ) : 
+
+```
+
+## 2. 토큰 저장 하기
+```js
+
+슬랙앱을 만들때는 권한 설정 및 인증 위해 토큰을 사용합니다.
+토큰의 종류는 다음과 같습니다.
+
+1. 유저 토큰: xoxp
+2. 봇 토큰: xoxb
+3. 앱 토큰: xapp
+
+```
 
