@@ -10,12 +10,16 @@ const app = new App({
 });
 
 app.command('/guide', async ({ command, ack, respond ,say}) => {
-    // Acknowledge command request
     await ack();
-  
     await respond(`https://g-yhlee.gitbook.io/slack-app-book/setting/setting`);
     await say(`https://g-yhlee.gitbook.io/slack-app-book/setting/setting`);    
   });
+
+
+app.message('hello', async ({ message, say }) => { 
+    await say(` TO: <@${message.user}> hello world! `);
+});
+
 
 (async () => {
   // Start your app
