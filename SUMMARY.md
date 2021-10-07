@@ -7,13 +7,13 @@
 * [setting](book/setting/setting.md)
 
 
-## message
+## APP.message
 * [hello](book/app/message/hello.md)
 
-## command
+## APP.command
 * [/guide](book/app/command/guide.md)
 
-## event
+## APP.event
 * [app_home_opened](book/app/event/app_home_opened.md)
 
 ## 토큰 & 스코프
