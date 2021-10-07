@@ -8,4 +8,4 @@
 
 
 ## dev
-* [HelloWorld](book/setting/hello world.md)
+* [HelloWorld](book/setting/helloWorld.md)
