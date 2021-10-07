@@ -16,5 +16,9 @@
 ## event
 * [app_home_opened](book/app/event/app_home_opened.md)
 
+## Learn More
+* [스코프](book/learnMore/scope.md)
+
+
 ## Q&A
 * [Q&A](book/Q&A/Q&A.md)
