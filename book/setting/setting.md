@@ -86,9 +86,9 @@ boltjs 에서는 socket 모드를 활용하여 api 를 활성화 시켰다는 �
 터미널을 열고 다음과 같은 명령어를 통해 토큰을 환경변수에 저장하도록 합니다.
 ```
 ```js
-export SLACK_SIGNING_SECRET=<your-signing-secret>
-export SLACK_BOT_TOKEN=xoxb-<your-bot-token>
-export SLACK_APP_TOKEN=xapp-<your-app-token>
+export SLACK_SIGNING_SECRET=`직접입력`
+export SLACK_BOT_TOKEN=`xoxb-직접입력`
+export SLACK_APP_TOKEN=`xapp-직접입력`
 ```
 
 ## 4. 정리 및 요약
