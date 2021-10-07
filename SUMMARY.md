@@ -8,4 +8,5 @@
 
 
 ## dev
-* [HelloWorld](book/dev/helloWorld.md)
+* [hello](book/app/message/hello.md)
+* [/guide](book/app/command/guide.md)

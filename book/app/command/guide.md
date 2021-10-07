@@ -1,3 +1,13 @@
+## 프로젝트 세팅 - 명령어 생성하기
+```js
+
+`/명령어` 를 만들기 위해서는 명령어를 등록 해야합니다.
+
+[myapp] - [Slash Commands] - [Create New Command]
+
+```
+
+```js
 // app.js
 
 const { App } = require('@slack/bolt');
@@ -20,7 +30,11 @@ app.command('/guide', async ({ command, ack, respond ,say}) => {
 (async () => {
   // Start your app
   await app.start(process.env.PORT || 3000);
-
   console.log('⚡️ Bolt app is running!');
 })();
+
+
+
+```
+
 
