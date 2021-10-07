@@ -56,8 +56,9 @@ boltjs 에서는 socket 모드를 활용하여 api 를 활성화 시켰다는 �
 #### 2.2 봇 토큰 ( xoxb ) 
 ```js
 
-봇 토큰 생성 방법 : "수동 생성"
-봇 토큰 위치 : [마이앱 페이지] - [OAuth & Permissions] - [Bot Token Scopes] - [Install App to Workspace]
+봇 토큰 생성 방식 : "수동 생성"
+봇 토큰 생성 방법 : 
+[마이앱 페이지] - [OAuth & Permissions] - [Bot Token Scopes] - [Install App to Workspace]
 봇 토큰 설명 :
 - 봇 토큰에서는 봇의 역할 범위(scope)를 지정해 줍니다. 예를들어 스코프에 `chat:write` 를 추가하면,
 봇이 슬랙채널에 쓰기 권한을 가지게 되는것입니다.
@@ -67,8 +68,12 @@ boltjs 에서는 socket 모드를 활용하여 api 를 활성화 시켰다는 �
 #### 2.3 앱 토큰 ( xapp ) 
 ```js
 
-앱 토큰 생성 방법 : "수동 생성"
-앱 토큰 위치 : [마이앱 페이지] - [OAuth & Permissions] - [Bot Token Scopes] - [Install App to Workspace]
+앱 토큰 생성 방식 : "수동 생성"
+앱 토큰 생성 방법: 
+
+1. 소켓모드 설정 : [마이앱 페이지] - [socket Mode] - [Enable Socket Mode] 
+2. 앱 토큰 생성 : [ Basic Information ] - [ Generate Token and Scopes ] - [ 스코프 설정 ] - [ generate ]
+
 앱 토큰 설명 :
 - 앱 토큰은 , 이벤트 권한을 관리할때 사용합니다. 
 
