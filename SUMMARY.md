@@ -12,3 +12,6 @@
 
 ## command
 * [/guide](book/app/command/guide.md)
+
+## event
+* [app_home_opened](book/app/event/app_home_opened.md)

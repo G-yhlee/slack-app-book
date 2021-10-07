@@ -1,42 +1,50 @@
-## 프로젝트 세팅
+## 프로젝트 세팅 - 이벤트 활성화 시키기
 ```js
 
-mkdir myapp && cd myapp && npm init -y && npm i @slack/bolt
+`event` api 를 사용하기 위해서는, 이벤트를 등록해야합니다.
 
+[myapp] - [Event Subscriptions] - [Enable Events] - [ Add Bot User Event] - [ 사용할 이벤트 등록 ]
 
-```
-
-## Hello World!
-```js
-
-1. 파일 생성 : app.js 생성
-2. 코드 작성 : app.js 에 아래의 코드 작성
-3. 앱 실행 : node app.js
-
+여기서는 `app_home_opened` 이벤트를 등록하겠습니다.
 ```
 
 ```js
 // app.js
+// Listen for users opening your App Home
+app.event('app_home_opened', async ({ event, client }) => {
+  try {
+    // Call views.publish with the built-in client
+    const result = await client.views.publish({
+      // Use the user ID associated with the event
+      user_id: event.user,
+      view: {
+        // Home tabs must be enabled in your app configuration page under "App Home"
+        "type": "home",
+        "blocks": [
+          {
+            "type": "section",
+            "text": {
+              "type": "mrkdwn",
+              "text": "*Welcome home, <@" + event.user + "> :house:*"
+            }
+          },
+          {
+            "type": "section",
+            "text": {
+              "type": "mrkdwn",
+              "text": "Learn how home tabs can be more useful and interactive <https://api.slack.com/surfaces/tabs/using|*in the documentation*>."
+            }
+          }
+        ]
+      }
+    });
 
-const { App } = require('@slack/bolt');
-
-const app = new App({
-  token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET,
-  socketMode: true,
-  appToken: process.env.SLACK_APP_TOKEN
+    // console.log(result);
+  }
+  catch (error) {
+    console.error(error);
+  }
 });
-
-app.message('hello', async ({ message, say }) => { 
-    await say(` TO: <@${message.user}> hello world! `);
-});
-
-(async () => {
-  // Start your app
-  await app.start(process.env.PORT || 3000);
-
-  console.log('⚡️ Bolt app is running!');
-})();
 
 
 ```

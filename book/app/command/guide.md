@@ -1,7 +1,7 @@
 ## 프로젝트 세팅 - 명령어 생성하기
 ```js
 
-`/명령어` 를 만들기 위해서는 명령어를 등록 해야합니다.
+`command` api 를 사용하기 위해서는, 명령어를 등록해야합니다.
 
 [myapp] - [Slash Commands] - [Create New Command]
 
