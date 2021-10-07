@@ -10,7 +10,9 @@
 
 ```js
 // app.js
-// Listen for users opening your App Home
+// https://slack.dev/bolt-js/concepts#commands
+
+
 app.event('app_home_opened', async ({ event, client }) => {
   try {
     // Call views.publish with the built-in client
