@@ -7,6 +7,8 @@
 * [setting](book/setting/setting.md)
 
 
-## dev
+## message
 * [hello](book/app/message/hello.md)
+
+## command
 * [/guide](book/app/command/guide.md)
