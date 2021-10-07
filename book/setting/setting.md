@@ -47,8 +47,8 @@ boltjs 에서는 socket 모드를 활용하여 api 를 활성화 시켰다는 �
 #### 2.1 유저 토큰 ( xoxp ) 
 ```js
 
-유저 토큰 생성 방법 : "자동 생성"
-유저 토큰 위치 : [마이앱 페이지] - [ Basic information ] - [Signing Secret]
+유저 토큰 생성 방식 : "자동 생성"
+유저 토큰 생성 방법 : [마이앱 페이지] - [ Basic information ] - [Signing Secret]
 유저 토큰 설명 : 
 - 유저 토큰은 자동으로 생성됩니다.
 
