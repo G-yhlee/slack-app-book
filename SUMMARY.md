@@ -16,8 +16,10 @@
 ## event
 * [app_home_opened](book/app/event/app_home_opened.md)
 
-## Learn More
-* [스코프](book/learnMore/scope.md)
+## 토큰 & 스코프
+* [유저 토큰 & 스코프](book/learnMore/userScope.md)
+* [봇 토큰 & 스코프](book/learnMore/botScope.md)
+* [앱 토큰 & 스코프](book/learnMore/appScope.md)
 
 
 ## Q&A
