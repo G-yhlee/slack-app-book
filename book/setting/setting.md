@@ -1,44 +1,30 @@
 ## 인트로 
+- 슬랙 앱을 만들기 위한 과정을 기록합니다.
+- 슬랙 앱은 웹 훅, restApi 이용 등등 의 다양한 방식으로 개발할수 있지만,
+- 여기에서는 boltjs 라는 프레임 워크를 활용해 슬랙 앱을 개발하는 방법을 알아 보도록 하겠습니다.
+
 ```md
-[ 인트로 ]
-슬랙 앱을 만들기 위한 과정을 기록합니다.
-슬랙 앱은 웹 훅, restApi 이용 등등 의 다양한 방식으로 개발할수 있지만,
-여기에서는 boltjs 라는 프레임 워크를 활용해 슬랙 앱을 개발하는 방법을 알아 보도록 하겠습니다.
-
-
 [ boltjs 특징 ]
 boltjs 프레임 워크에서 기존과 달라진 특징은, 
 기존에는 public HTTP endpoint 를 사용한 반면,
 boltjs 에서는 socket 모드를 활용하여 api 를 활성화 시켰다는 점 입니다.
-
-이제, 다음의 과정을 통해 slack app 을 만들어 보겠습니다.
-
 ```
 ## 둘러볼 페이지
-```md
-우리는 슬랙 앱을 만드는동안 다음과 같은 페이지들을 둘러볼 것입니다.
-편의상 페이지 이름을 다음과 같이 명명하겠습니다.
-
-공식 페이지 : https://api.slack.com/
-앱스 페이지 : https://api.slack.com/apps
-마이앱 페이지 : https://api.slack.com/apps/..마이앱...
-볼츠js 페이지 : https://slack.dev/bolt-js/tutorial/getting-started
-
-```
+- 공식 페이지 : https://api.slack.com/
+- 앱스 페이지 : https://api.slack.com/apps
+- 볼츠js 페이지 : https://slack.dev/bolt-js/tutorial/getting-started
+- manifest 설정 페이지 : https://api.slack.com/reference/manifests
 
 ## 1. 앱 만들기
 ```js
 앱스 페이지에서 `Create New App` - `From an app manifest` - `workspace 선택` 을 클릭 하여 앱 생성을 진행 합니다.
 
 앱의 설정은 다음의 yaml 코드를 복사하여 진행합니다.
-
 ```
 
 ## 2. 앱 설정하기 
 - 앱 설정을 위해 .yaml 로 작성된 설정 파일을 복사하여 붙여넣습니다.
-- 설정파일은 앱이 만들어진 이후에도 변경 가능 합니다. 
-- 각 설정 내용의 세부 사항은 공식홈페이지에서 확인 하실수 있습니다.
-- https://api.slack.com/reference/manifests
+- `설정파일`은 앱이 만들어진 이후에도 변경 가능 합니다. 
 
 ```yaml
 _metadata:
@@ -159,7 +145,32 @@ mkdir myapp && cd myapp && npm init -y && npm i @slack/bolt
 ```
 
 ## 6. app.js 파일 추가
-```
-app.js 파일에 
+```js
+// app.js
+
+const { App } = require('@slack/bolt');
+
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  socketMode: true,
+  appToken: process.env.SLACK_APP_TOKEN
+});
+
+app.message('hello', async ({ message, say }) => { 
+    await say(` TO: <@${message.user}> hello world! `);
+});
+
+(async () => {
+  // Start your app
+  await app.start(process.env.PORT || 3000);
+
+  console.log('⚡️ Bolt app is running!');
+})();
+
 ```
 
+## 7. 앱 실행
+- 터미널에 `node app.js` 입력
+- 슬랙 앱을 워크 스페이스에 추가 한뒤 `hello` 입력
+- `hello world` 출력되면 성공 입니다.
