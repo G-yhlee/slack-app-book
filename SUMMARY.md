@@ -4,7 +4,7 @@
 
 
 ## setting
-* [setting](book/setting/setting.md)
+* [슬랙 앱 만들기](book/setting/setting.md)
 
 
 ## APP.message
