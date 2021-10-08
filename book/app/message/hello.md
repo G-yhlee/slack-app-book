@@ -1,10 +1,4 @@
-## 프로젝트 세팅
-```js
 
-mkdir myapp && cd myapp && npm init -y && npm i @slack/bolt
-
-
-```
 
 ## Hello World!
 ```js
