@@ -73,7 +73,7 @@ settings:
   token_rotation_enabled: false
 ```
 
-## 2. 토큰 생성 하기
+## 3. 토큰 생성 하기
 - 앱을 생성하고나면 토큰을 생성하도록 합니다.
 - 토큰을 생성하고나면 토큰을 환경 변수에 저장하여 쓸 수 있도록 합니다.
 
@@ -87,7 +87,7 @@ settings:
 
 ```
 
-#### 2.1 유저 토큰 ( xoxp ) 
+#### 3.1 유저 토큰 ( xoxp ) 
 ```js
 
 유저 토큰 생성 방식 : "자동 생성"
@@ -96,7 +96,7 @@ settings:
 - 유저 토큰은 자동으로 생성됩니다.
 
 ```
-#### 2.2 봇 토큰 ( xoxb ) 
+#### 3.2 봇 토큰 ( xoxb ) 
 ```js
 
 봇 토큰 생성 방식 : "수동 생성"
@@ -109,7 +109,7 @@ settings:
 - 슬랙 앱을 개발하면서 추가적으로 필요한 권한이 있다면, 설정 파일의 'oauth_config' 영역에서 권한을 추가 하면됩니다.
 
 ```
-#### 2.3 앱 토큰 ( xapp ) 
+#### 3.3 앱 토큰 ( xapp ) 
 ```js
 
 앱 토큰 생성 방식 : "수동 생성"
@@ -121,7 +121,7 @@ settings:
 
 ```
 
-## 3. 토큰 저장 하기
+## 4. 토큰 저장 하기
 ```js
 각각의 토큰을 생성하였으면, 환경변수에 저장합니다.
 터미널을 열고 다음과 같은 명령어를 통해 토큰을 환경변수에 저장하도록 합니다.
@@ -131,7 +131,7 @@ export SLACK_SIGNING_SECRET=`직접입력`
 export SLACK_BOT_TOKEN=`xoxb-직접입력`
 export SLACK_APP_TOKEN=`xapp-직접입력`
 ```
-## 4. 앱 설치 및 토큰 설정  요약
+## 5. 앱 설치 및 토큰 설정  요약
 ```js
 
 1~3 의 과정을 통해 `앱 설치` 및 `토큰 설정` 의 과정을 완료하였습니다.
@@ -139,12 +139,12 @@ export SLACK_APP_TOKEN=`xapp-직접입력`
 
 ```
 
-## 5. Nodejs 프로젝트 시작
+## 6. Nodejs 프로젝트 시작
 ```js
 mkdir myapp && cd myapp && npm init -y && npm i @slack/bolt
 ```
 
-## 6. app.js 파일 추가
+## 7. app.js 파일 추가
 ```js
 // app.js
 
@@ -170,7 +170,7 @@ app.message('hello', async ({ message, say }) => {
 
 ```
 
-## 7. 앱 실행
+## 8. 앱 실행
 - 터미널에 `node app.js` 입력
 - 슬랙 앱을 워크 스페이스에 추가 한뒤 `hello` 입력
 - `hello world` 출력되면 성공 입니다.
