@@ -17,7 +17,7 @@
 ```md
 - git clone [repository 주소]
 - sudo npm install pm2 -g
-- pm2 start [index.js]
+- pm2 start [app.js]
 
 ```
 
