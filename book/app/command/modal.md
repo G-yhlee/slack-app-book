@@ -1,4 +1,5 @@
 ```js
+
 // Listen for a slash command invocation
 app.command('/prism', async ({ ack, body, client }) => {
   // Acknowledge the command request
@@ -13,7 +14,7 @@ app.command('/prism', async ({ ack, body, client }) => {
       view: {
         type: 'modal',
         // View identifier
-        callback_id: 'view_1',
+        callback_id: 'cb_modal',
         title: {
           type: 'plain_text',
           text: 'title'
@@ -31,19 +32,19 @@ app.command('/prism', async ({ ack, body, client }) => {
                 type: 'plain_text',
                 text: 'button'
               },
-              action_id: 'button_1'
+              action_id: 'ac_1'
             }
           },
           {
             type: 'input',
-            block_id: 'input_c',
+            block_id: 'id_block_1',
             label: {
               type: 'plain_text',
               text: 'input에 라벨을 달수 있다'
             },
             element: {
               type: 'plain_text_input',
-              action_id: 'input_1',
+              action_id: 'id_action_input_1',
               multiline: true
             }
           }
@@ -62,7 +63,7 @@ app.command('/prism', async ({ ack, body, client }) => {
 });
 
 
-app.action('button_1', async ({ ack, body, client }) => {
+app.action('ac_1', async ({ ack, body, client }) => {
   // Acknowledge the button request
   await ack();
 
@@ -77,7 +78,7 @@ app.action('button_1', async ({ ack, body, client }) => {
       view: {
         type: 'modal',
         // View identifier
-        callback_id: 'view_1',
+        callback_id: 'cb_modal',
         title: {
           type: 'plain_text',
           text: 'view_area'
@@ -104,6 +105,33 @@ app.action('button_1', async ({ ack, body, client }) => {
     console.error(error);
   }
 });
+
+// Handle a view_submission request
+app.view('cb_modal', async ({ ack, body, view, client }) => {
+  await ack();
+  const val = view['state']['values']['id_block_1']['id_action_input_1'];
+  console.log('val',val)
+  const user = body['user']['id'];
+  console.log(user,user.input)
+
+  let msg = `input 값은 : ${val.value} 입니다. `;
+
+  try {
+    await client.chat.postMessage({
+      channel: user,
+      text: msg
+    });
+  }
+  catch (error) {
+    console.error(error);
+  }
+
+});
+
+
+
+
+
 
 ```
 
