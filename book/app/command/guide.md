@@ -1,4 +1,4 @@
-```js
+```javascript
 app.command('/guide', async ({ command, ack, respond ,say}) => {
     // Acknowledge command request
     await ack();

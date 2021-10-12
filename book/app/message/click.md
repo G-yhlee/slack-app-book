@@ -1,4 +1,4 @@
-```js
+```javascript
 app.message('click', async ({ message, say }) => {
   console.log(message.user)
   
