@@ -33,4 +33,4 @@
 
 
 ## blockit
-* [블록 킷 디자인](book/blockit/list.md)
+* [블록 킷 디자인](book/app/blockit/list.md)
