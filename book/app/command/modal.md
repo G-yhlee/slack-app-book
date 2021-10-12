@@ -1,4 +1,4 @@
-```js
+```javascript
 // Listen for a slash command invocation
 app.command('/prism', async ({ ack, body, client }) => {
   // Acknowledge the command request
