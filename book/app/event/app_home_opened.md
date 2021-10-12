@@ -1,4 +1,4 @@
-```ts
+```javascript
 app.event('app_home_opened', async ({ event, client }) => {
   try {
     // Call views.publish with the built-in clien t
