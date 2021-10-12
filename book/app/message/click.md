@@ -16,7 +16,7 @@ app.message('click', async ({ message, say }) => {
             "type": "plain_text",
             "text": "Click"
           },
-          "action_id": "button_click"
+          "action_id": "button_click" // action_id 는 임의의 이름으로 변경 가능
         }
       }
     ],
