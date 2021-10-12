@@ -14,6 +14,7 @@
 
 ## APP.command
 * [/guide](book/app/command/guide.md)
+* [/modal](book/app/command/modal.md)
 
 ## APP.event
 * [app_home_opened](book/app/event/app_home_opened.md)
