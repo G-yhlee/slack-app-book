@@ -1,7 +1,7 @@
 ```js
 app.event('app_home_opened', async ({ event, client }) => {
   try {
-    // Call views.publish with the built-in client
+    // Call views.publish with the built-in clien t
     const result = await client.views.publish({
       // Use the user ID associated with the event
       user_id: event.user,
