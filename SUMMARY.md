@@ -22,6 +22,9 @@
 * [봇 토큰 & 스코프](book/learnMore/botScope.md)
 * [앱 토큰 & 스코프](book/learnMore/appScope.md)
 
+## deploy
+* [ ec2_환경설정 ](book/deploy/ec2/ec2_환경설정.md)
+* [ ec2_기본설치 ](book/deploy/ec2/ec2_기본설치.md)
 
 ## Q&A
 * [Q&A](book/Q&A/Q&A.md)
