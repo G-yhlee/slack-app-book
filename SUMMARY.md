@@ -34,3 +34,4 @@
 
 ## blockit
 * [message_preview](book/app/blockit/message_preview.md)
+* [modal_preview](book/app/blockit/modal_preview.md)
