@@ -4,8 +4,6 @@ https://app.slack.com/block-kit-builder/TCSMAMLLD#%7B%22type%22:%22modal%22,%22t
 ```
 
 ```javascript
-
-
 {
 	"type": "modal",
 	"title": {
