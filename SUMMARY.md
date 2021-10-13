@@ -33,5 +33,4 @@
 
 
 ## blockit
-* [블록 킷 디자인](book/app/blockit/list.md)
-* [ 모달 ](book/app/blockit/kit_modal.md)
+* [message_preview](book/app/blockit/message_preview.md)
