@@ -13,7 +13,7 @@
 * [click](book/app/message/click.md)
 
 ## APP.command
-* [/guide](book/app/command/guide.md)
+* [/command](book/app/command/command.md)
 * [/modal](book/app/command/modal.md)
 
 ## APP.event
