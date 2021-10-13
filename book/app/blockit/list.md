@@ -1,5 +1,5 @@
 ### 블록킷 구조
-```js
+```javascript 
 type: section | ....
 text: {type,text}
 accessory: {type,text,acction_id}
@@ -7,7 +7,7 @@ blocks: [{type,text,accessory}]
 kit: {blocks,text}
 
 ```
-```js
+```javascript
 {
     blocks: [
       {
