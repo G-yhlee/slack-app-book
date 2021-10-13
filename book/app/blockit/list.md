@@ -3,10 +3,12 @@
 type: section | ....
 text: {type,text}
 accessory: {type,text,acction_id}
-blocks: [{type,text,accessory}]
+blocks: [{type,text,accessory},...]
 kit: {blocks,text}
-
 ```
+
+
+### 블록킷 예시
 ```javascript
 {
     blocks: [
