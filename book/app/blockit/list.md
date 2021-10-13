@@ -1,3 +1,33 @@
+### 블록킷 구조
+```js
+type: section | ....
+text: {type,text}
+accessory: {type,text,acction_id}
+blocks: [{type,text,accessory}]
+kit: {blocks,text}
+
+```
+```js
+{
+    blocks: [
+      {
+        "type": "section",
+        "text": { "type": "mrkdwn","text": "click" },
+        "accessory": {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Click"
+          },
+          "action_id": "button_click" 
+        }
+      }
+    ],
+    text: "click..."
+  }
+```
+
+
 ### 블록 디자인 
 ```md
 # 모달 + 옵션

@@ -1,4 +1,10 @@
 ```javascript
+
+// accessory { type, text, action_id }
+// type
+// blocks { type,text,accessory } 
+
+
 app.message('click', async ({ message, say }) => {
   console.log(message.user)
   
@@ -8,7 +14,7 @@ app.message('click', async ({ message, say }) => {
         "type": "section",
         "text": {
           "type": "mrkdwn",
-          "text": `click`
+          "text": "click"
         },
         "accessory": {
           "type": "button",
@@ -20,7 +26,7 @@ app.message('click', async ({ message, say }) => {
         }
       }
     ],
-    text: `click...`
+    text: "click..."
   });
 });
 
@@ -29,6 +35,6 @@ app.action('button_click', async ({ body, ack, say }) => {
   console.log(body.user.id)
 
   await ack();
-  await say(`clicked`);
+  await say("clicked");
 });
 ```
