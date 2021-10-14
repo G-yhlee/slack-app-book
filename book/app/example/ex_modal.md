@@ -1,11 +1,16 @@
-### message_preview
-
-### kit1
-```md
-:c-modal-[:section:a-button,:b-input:a-plain_text_input]
-```
 ```javascript
-{
+// app.js
+
+const { App } = require('@slack/bolt');
+
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  socketMode: true,
+  appToken: process.env.SLACK_APP_TOKEN
+});
+
+const kit1 = {
   "type": "modal",
   "callback_id": "callback_id_MODAL_1",
   "title": {
@@ -48,14 +53,8 @@
     "text": "Submit"
   }
 }
-```
 
-### kit2
-```md
-:modal-[:section,:image]
-```
-```javascript
-{
+const kit2 = {
 	"type": "modal",
 	"title": {
 		"type": "plain_text",
@@ -76,4 +75,33 @@
 		}
 	]
 }
+
+
+app.command('/prism', async ({ ack, body, client }) => {
+  await ack();
+  let {trigger_id } = body
+  client.views.open({ trigger_id ,view: kit1 });
+});
+
+app.action('action_id_BUTTON_1', async ({ ack, body, client }) => {
+  await ack();
+  const {id: view_id , hash  } = body.view
+  client.views.update({view_id, hash, view: kit2  });
+});
+
+app.view('callback_id_MODAL_1', async ({ ack, body, view, client }) => {
+  await ack();
+  const {value} = view['state']['values']['block_id_INPUT_1']['action_id_INPUT_1'];
+  const {id: channel} = body['user'];
+  const text =  `input 값은.. ${value} 입니다. `
+  await client.chat.postMessage({channel,text});
+
+});
+
+(async () => {
+  // Start your app
+  await app.start(process.env.PORT || 3000);
+
+  console.log('⚡️ Bolt app is running!');
+})();
 ```
