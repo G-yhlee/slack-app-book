@@ -13,7 +13,7 @@ const SectionButtonID = {
 					"type": "plain_text",
 					"text": "Click"
 				},
-				"action_id": "button_click"
+				"action_id": "SectionButtonID"
 			}
 		}
 	]
