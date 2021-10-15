@@ -24,7 +24,7 @@ const SectionButtonID = {
 
 ```javascript
 const kit = {
-    HomeBlock : (v)=> { return {
+    HomeBlock : (v)=> ({
     "type": "home",
     "blocks": [
       {
@@ -42,7 +42,7 @@ const kit = {
         }
       }
     ]
-  }
-}}
+  })
+}
 
 ```
