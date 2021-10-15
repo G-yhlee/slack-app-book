@@ -33,6 +33,7 @@
 
 
 ## blockit
+* [리스트](book/app/blockit/_list.md)
 * [블록구성요소](book/app/blockit/블록구성요소.md)
 * [message_preview](book/app/blockit/message_preview.md)
 * [modal_preview](book/app/blockit/modal_preview.md)
