@@ -16,6 +16,17 @@ A2: https://api.slack.com/apps/A02GQG68SDS/app-home?
 Q: 한글 이름 입력시 앱 설치가 안되면 ?
 A1: [ 영문으로 먼저 슬랙 앱을 설치하고 난 다음 한글이름을 사용하면 동작한다 ] 
 
+
+Q : 쓰레드에서 챗봇 사용가능 ? 
+A1 : boltjs 프레임워크에서는 불가능, 다른 방법으론 제한적으로 가능
+https://medium.com/slack-developer-blog/bringing-your-bot-into-threaded-messages-cd272a42924f
+
+https://api.slack.com/methods/chat.postMessage#threads_and_replies
+
+https://api.slack.com/messaging/managing#threading
+
+
+
 ```
 
 
