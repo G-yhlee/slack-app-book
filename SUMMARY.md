@@ -10,6 +10,7 @@
 ## APP.message
 * [hello](book/app/message/hello.md)
 * [log](book/app/message/log.md)
+* [getId](book/app/message/getId.md)
 * [click](book/app/message/click.md)
 
 ## APP.command
