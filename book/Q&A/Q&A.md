@@ -25,8 +25,6 @@ https://api.slack.com/methods/chat.postMessage#threads_and_replies
 
 https://api.slack.com/messaging/managing#threading
 
-
-
 ```
 
 

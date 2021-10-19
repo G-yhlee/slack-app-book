@@ -20,6 +20,10 @@
 ## APP.event
 * [app_home_opened](book/app/event/app_home_opened.md)
 
+
+## example
+* [getUserInfo](book/app/example/getUserInfo.md)
+
 ## 토큰 & 스코프
 * [유저 토큰 & 스코프](book/learnMore/userScope.md)
 * [봇 토큰 & 스코프](book/learnMore/botScope.md)
@@ -39,3 +43,4 @@
 * [message_preview](book/app/blockit/message_preview.md)
 * [modal_preview](book/app/blockit/modal_preview.md)
 * [examples](book/app/blockit/examples.md)
+
