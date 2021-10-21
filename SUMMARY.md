@@ -13,6 +13,7 @@
 * [getId](book/app/message/getId.md)
 * [click](book/app/message/click.md)
 * [unfurl](book/app/message/unfurl.md)
+* [thread_ts](book/app/message/thread_ts.md)
 
 ## APP.command
 * [/command](book/app/command/command.md)
