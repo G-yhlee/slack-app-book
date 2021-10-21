@@ -5,10 +5,9 @@
 
 ## setting
 * [슬랙 앱 만들기](book/setting/setting.md)
-
+* [overview](book/setting/overview.md)
 
 ## APP.message
-* [overview](book/app/message/overview.md)
 * [hello](book/app/message/hello.md)
 * [log](book/app/message/log.md)
 * [getId](book/app/message/getId.md)
