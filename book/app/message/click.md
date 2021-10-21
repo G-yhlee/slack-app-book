@@ -2,12 +2,12 @@
 
 app.message('click', async ({ message, say }) => {
   console.log(message.user)
-  const kit = SectionButtonID
-  await say(kit);
+  const payload = kit.messageKit.click({action_id1: 'a1'})
+  await say(payload);
 });
-
-app.action('button_click', async ({ body, ack, say }) => {
+app.action('a1', async ({ body, ack, say }) => {
   await ack();
   await say("clicked");
 });
+
 ```
