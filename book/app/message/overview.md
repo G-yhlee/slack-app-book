@@ -1,7 +1,7 @@
 ```javascript
 app.message(/^(test|log).*/, async ({ context, message, say, client, event }) => {
 
-  // say 가능 | team,channel,userName 가져오기
+  // say | team,channel,userName 가져오기
   const {team} = await app.client.team.info();
   await say(`
   teamId : <@${team.id}>  
