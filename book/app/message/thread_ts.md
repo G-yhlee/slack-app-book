@@ -6,5 +6,5 @@ app.message('thread_ts', async ({ message, say ,client}) => {
     thread_ts: message.thread_ts,
     text: "Hello again :wave:"
   });  
-});
+})
 ```
