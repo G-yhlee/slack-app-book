@@ -20,6 +20,7 @@
 
 ## APP.event
 * [app_home_opened](book/app/event/app_home_opened.md)
+* [link_shared](book/app/event/link_shared.md)
 
 
 ## example
