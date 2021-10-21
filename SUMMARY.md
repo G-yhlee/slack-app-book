@@ -12,6 +12,7 @@
 * [log](book/app/message/log.md)
 * [getId](book/app/message/getId.md)
 * [click](book/app/message/click.md)
+* [unfurl](book/app/message/unfurl.md)
 
 ## APP.command
 * [/command](book/app/command/command.md)
