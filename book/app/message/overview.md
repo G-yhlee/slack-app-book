@@ -16,7 +16,7 @@ app.message(/^(test|log).*/, async ({ context, message, say, client, event }) =>
   const unfurl = 'client.chat.unfurl , event{channel,event.event_ts} '
 
   // 봇 토큰 가져오기
-  console.log(context.botToken)
+  const botToken = 'context'
 
 });
 ```
